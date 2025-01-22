@@ -6,10 +6,10 @@ body {
 
 /* Header styling */
 header {
-    background-color: #4D1979;
+    background-color: #4D1979; /* TCU Purple */
     color: white;
     padding: 0;
-    height: 60px; /* Set exact height for uniformity */
+    height: 60px; /* Fixed height for uniformity */
 }
 
 .header-container {
@@ -17,7 +17,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    height: 100%; /* Ensure content is centered vertically */
+    height: 100%; /* Vertically align content */
 }
 
 /* Navigation menu styling */
@@ -27,7 +27,7 @@ header {
     align-items: center;
     padding: 0;
     margin: 0;
-    height: 100%; /* Match height of header */
+    height: 100%; /* Match the header's height */
 }
 
 .nav-menu li {
@@ -40,7 +40,7 @@ header {
     font-size: 1.2em;
     padding: 10px 15px;
     display: flex;
-    align-items: center; /* Align text vertically */
+    align-items: center; /* Vertically center text */
     height: 100%;
 }
 
@@ -66,54 +66,57 @@ header {
     background-color: #0056b3;
 }
 
-h1 {
-    color: white;
-    padding: 5px;
-    margin: 5px 0;
-    text-align: center;
-}
-
-/* Navigation menu styling */
-.nav-menu {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.nav-menu li {
-    margin: 0 15px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2em;
-    padding: 5px 15px;
-    display: block;
-}
-
-.nav-menu a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
 /* Main content styling */
 main {
-    padding: 20px 20x;
+    padding: 20px;
     text-align: center;
 }
 
+/* Week Box Styling */
 .week-box {
+    background-color: #f0f0f0; /* Light gray */
+    color: black;
+    border-radius: 8px;
+    padding: 20px; /* Adjust padding for spacing */
+    max-width: 75%; /* Set width to a percentage for responsiveness */
+    margin: 20px auto; /* Center align */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Left align text content */
+}
+
+/* Headings Styling */
+h1, h2 {
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Consistent box styling for different content */
+.box {
     background-color: #f0f0f0;
     color: black;
     border-radius: 8px;
-    padding: 5px 5px;
-    max-width: 1000px; /* Adjust to be slightly wider than the image */
-    margin: 8px auto;
+    padding: 20px;
+    max-width: 75%; /* Matches the week box */
+    margin: 20px auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
 }
 
+/* General button styling */
+button {
+    background-color: #4D1979;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #371054;
+}

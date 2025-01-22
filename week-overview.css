@@ -10,8 +10,7 @@ header {
     color: white;
 }
 
-h1, h2 {
-    background-color: dimgray;
+h1 {
     color: white;
     padding: 10px;
     margin: 10px 0;

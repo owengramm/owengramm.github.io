@@ -6,25 +6,28 @@ body {
 
 /* Header styling */
 header {
-    background-color: #4D1979; /* TCU Purple */
+    background-color: #4D1979;
     color: white;
-    padding: 0; /* Remove extra padding */
+    padding: 0;
+    height: 60px; /* Set exact height for uniformity */
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px; /* Add padding for spacing */
+    padding: 10px 20px;
+    height: 100%; /* Ensure content is centered vertically */
 }
 
 /* Navigation menu styling */
 .nav-menu {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
+    height: 100%; /* Match height of header */
 }
 
 .nav-menu li {
@@ -35,8 +38,10 @@ header {
     text-decoration: none;
     color: white;
     font-size: 1.2em;
-    padding: 5px 15px;
-    display: block;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center; /* Align text vertically */
+    height: 100%;
 }
 
 .nav-menu a:hover {
@@ -54,12 +59,17 @@ header {
     font-size: 0.9em;
     cursor: pointer;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    height: fit-content; /* Ensures the height matches the nav links */
+    height: fit-content;
 }
 
 .logout-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    border-color: #0056b3;
+    background-color: #0056b3;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
@@ -68,6 +78,7 @@ h1 {
     text-align: center;
 }
 
+/* Matchups container */
 .matchups-container {
     display: flex;
     flex-direction: column;
@@ -76,29 +87,27 @@ h1 {
 }
 
 .matchup-box {
-    background-color: #d3d3d3; /* Light grey background */
-    width: 75%; /* Box stretches 75% of the page */
+    background-color: #d3d3d3;
+    width: 50%; /* Box stretches half the page width */
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align content within box */
 }
 
 .matchup-title {
     font-size: 1.2em;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
 .matchup-option {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-label {
-    margin-right: 10px;
-    font-size: 1em;
-}
-
+/* Save button styling */
 button {
     background-color: #4D1979;
     color: white;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFB Pick 'Em</title>
-    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="stylesheet" href="loginstyle.css">
     <script>
         // Usernames and their corresponding passwords
         const users = {
@@ -27,7 +27,7 @@
             const password = document.getElementById("password").value;
 
             if (users[username] && users[username] === password) {
-                window.location.href = "landing.html"; // Redirect to landing page
+                window.location.href = "home.html"; // Redirect to home page
             } else {
                 alert("Invalid username or password. Please try again.");
             }

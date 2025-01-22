@@ -12,6 +12,12 @@ header {
     margin: 20px 0;
 }
 
+h1 {
+    background-color: #dimgray;
+    color: white;
+    justify-content: center;
+}
+
 .week-title {
     color: white;
     background-color: purple;

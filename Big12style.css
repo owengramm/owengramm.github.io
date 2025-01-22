@@ -15,7 +15,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px; /* Add padding for spacing */
+    padding: 5px 20px; /* Add padding for spacing */
 }
 
 /* Navigation menu styling */

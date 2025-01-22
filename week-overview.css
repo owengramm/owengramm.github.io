@@ -107,7 +107,7 @@ main {
     background-color: #f0f0f0;
     color: white;
     border-radius: 8px;
-    padding: 8px;
+    padding: 5px 5px;
     max-width: 1000px; /* Adjust to be slightly wider than the image */
     margin: 8px auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);

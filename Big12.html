@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Pick 'Em - Landing Page</title>
+    <link rel="stylesheet" href="week-overview.css">
+
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="week-overview.html">Week Overview</a></li>
+                <li><a href="big12-picks.html">Big 12 Picks</a></li>
+                <li><a href="maction-gotw-picks.html">MACtion and GOTW Picks</a></li>
+                <li><a href="upset-promo-picks.html">Upset and Promo Picks</a></li>
+                <li><a href="rules-faq.html">Rules and FAQ</a></li>
+            </ul>
+        </nav>
+        <button class="logout-button" onclick="window.location.href='index.html'">Log Out</button>
+    </div>
+</header>
+
+<main>
+    <h1>Big 12 Picks!</h1>
+        <div class="matchups-container">
+            <div class="matchup-list">
+                <h2>Week's Matchups</h2>
+                <ul id="matchups">
+                    <!-- Matchups will be dynamically populated -->
+                </ul>
+            </div>
+
+            <div class="selection-panel">
+                <h2>Your Picks</h2>
+                <form id="picks-form">
+                    <!-- Binary options for matchups will be dynamically generated here -->
+                </form>
+                <button id="save-button">Save Picks</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // User login simulation
+        const currentUser = "Griffin"; // Simulated user for demonstration
+
+        // Matchups data
+        const matchups = [
+            { id: 1, team1: "TCU", team2: "Baylor" },
+            { id: 2, team1: "Texas", team2: "Oklahoma" },
+            { id: 3, team1: "Kansas State", team2: "Iowa State" },
+            { id: 4, team1: "Texas Tech", team2: "West Virginia" },
+            { id: 5, team1: "Kansas", team2: "Oklahoma State" }
+        ];
+
+        // Populate matchups and form
+        const matchupsList = document.getElementById("matchups");
+        const picksForm = document.getElementById("picks-form");
+
+        matchups.forEach((matchup) => {
+            // Add matchup to list
+            const listItem = document.createElement("li");
+            listItem.textContent = `${matchup.team1} vs ${matchup.team2}`;
+            matchupsList.appendChild(listItem);
+
+            // Add binary options to form
+            const formItem = document.createElement("div");
+            formItem.className = "matchup-option";
+            formItem.innerHTML = `
+                <label>
+                    <input type="radio" name="matchup-${matchup.id}" value="${matchup.team1}" required>
+                    ${matchup.team1}
+                </label>
+                <label>
+                    <input type="radio" name="matchup-${matchup.id}" value="${matchup.team2}" required>
+                    ${matchup.team2}
+                </label>
+            `;
+            picksForm.appendChild(formItem);
+        });
+
+        // Save picks to localStorage
+        document.getElementById("save-button").addEventListener("click", () => {
+            const formData = new FormData(picksForm);
+            const picks = {};
+
+            matchups.forEach((matchup) => {
+                picks[matchup.id] = formData.get(`matchup-${matchup.id}`);
+            });
+
+            // Save picks for the current user
+            const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
+            allPicks[currentUser] = picks;
+            localStorage.setItem("big12Picks", JSON.stringify(allPicks));
+
+            alert("Your picks have been saved!");
+        });
+
+        // Load existing picks
+        window.onload = () => {
+            const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
+            const userPicks = allPicks[currentUser] || {};
+
+            matchups.forEach((matchup) => {
+                const selectedTeam = userPicks[matchup.id];
+                if (selectedTeam) {
+                    const radio = document.querySelector(
+                        `input[name="matchup-${matchup.id}"][value="${selectedTeam}"]`
+                    );
+                    if (radio) radio.checked = true;
+                }
+            });
+        };
+    </script>
+</body>
+</html>

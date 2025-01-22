@@ -105,7 +105,7 @@ main {
 
 .week-box {
     background-color: #f0f0f0;
-    color: white;
+    color: black;
     border-radius: 8px;
     padding: 5px 5px;
     max-width: 1000px; /* Adjust to be slightly wider than the image */

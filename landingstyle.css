@@ -6,12 +6,19 @@ body {
 
 /* Navigation bar styling */
 header {
-    background-color: #4D1979;
+    background-color: #4D1979; /* TCU Purple*/
     color: white;
 }
 
-h1, h2 {
-    background-color: dimgray;
+h1 {
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+} 
+
+h2 {
+    background-color: #2e2e2e;
     color: white;
     padding: 10px;
     margin: 10px 0;

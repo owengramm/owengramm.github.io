@@ -4,11 +4,64 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Navigation bar styling */
+/* Header styling */
 header {
-    background-color: #4D1979;
+    background-color: #4D1979; /* TCU Purple */
     color: white;
+    padding: 0; /* Remove extra padding */
 }
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Add padding for spacing */
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-menu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Log Out button styling */
+.logout-button {
+    background-color: blue;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: fit-content; /* Ensures the height matches the nav links */
+}
+
+.logout-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+
 
 h1 {
     color: white;

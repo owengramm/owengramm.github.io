@@ -58,7 +58,7 @@ img {
 }
 
 /* Rules box styling */
-.rules-box {
+.week-box {
     background-color: dimgray;
     color: white;
     border-radius: 8px;
@@ -67,12 +67,6 @@ img {
     margin: 20px auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: left;
-}
-
-.rules-box h2 {
-    margin: 0;
-    padding: 10px 0;
-    text-align: center;
 }
 
 .rules-box ol {

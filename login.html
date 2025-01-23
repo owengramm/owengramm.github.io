@@ -27,7 +27,11 @@
             const password = document.getElementById("password").value;
 
             if (users[username] && users[username] === password) {
-                window.location.href = "home.html"; // Redirect to home page
+                // Store the username in localStorage
+                localStorage.setItem("currentUser", username);
+                
+                // Redirect to the home page
+                window.location.href = "home.html";
             } else {
                 alert("Invalid username or password. Please try again.");
             }

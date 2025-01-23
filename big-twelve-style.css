@@ -141,7 +141,6 @@ button {
     cursor: pointer;
     margin: 20px auto;
     display: block;
-    width: 20%;
 }
 
 button:hover {

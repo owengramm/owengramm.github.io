@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFB Pick 'Em - Big 12 Picks</title>
     <link rel="stylesheet" href="big-twelve-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
 <header>
@@ -46,9 +47,6 @@
 
 
 <script>
-    // User login simulation
-    const currentUser = "Griffin";
-
     // Matchups data
     const matchups = [
         { id: 1, team1: "TCU", team2: "Baylor" },
@@ -83,21 +81,21 @@
         picksTable.appendChild(row);
     });
 
-    // Save picks to localStorage
-    document.getElementById("save-button").addEventListener("click", () => {
-        const formData = new FormData(document.querySelector("#picks-table"));
-        const picks = {};
+document.getElementById("save-button").addEventListener("click", () => {
+    const formData = new FormData(document.querySelector("#picks-table"));
+    const picks = {};
 
-        matchups.forEach((matchup) => {
-            picks[matchup.id] = formData.get(`matchup-${matchup.id}`);
-        });
-
-        const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
-        allPicks[currentUser] = picks;
-        localStorage.setItem("big12Picks", JSON.stringify(allPicks));
-
-        alert("Your picks have been saved!");
+    matchups.forEach((matchup) => {
+        picks[matchup.id] = formData.get(`matchup-${matchup.id}`);
     });
+
+    // Save picks for the current user
+    const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
+    allPicks[currentUser] = picks; // Save under the current user's name
+    localStorage.setItem("big12Picks", JSON.stringify(allPicks));
+
+    alert("Your picks have been saved!");
+});
 
     // Load existing picks
     window.onload = () => {
@@ -114,6 +112,46 @@
             }
         });
     };
+
+// Check if the logged-in user is Owen
+if (currentUser === "Owen") {
+    const exportButtonContainer = document.getElementById("export-button-container");
+
+    // Create the Export Button
+    const exportButton = document.createElement("button");
+    exportButton.id = "export-button";
+    exportButton.textContent = "Export to Excel";
+
+    // Append the Export Button
+    exportButtonContainer.appendChild(exportButton);
+
+    // Add the Export Functionality
+    exportButton.addEventListener("click", () => {
+        const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
+
+        // Convert the saved picks to a format suitable for Excel
+        const data = [];
+        for (const [username, picks] of Object.entries(allPicks)) {
+            for (const [matchupId, selectedTeam] of Object.entries(picks)) {
+                const matchup = matchups.find((m) => m.id == matchupId);
+                if (matchup) {
+                    data.push({
+                        Username: username,
+                        Matchup: `${matchup.team1} vs ${matchup.team2}`,
+                        Pick: selectedTeam,
+                    });
+                }
+            }
+        }
+
+        // Create a worksheet and export to Excel
+        const worksheet = XLSX.utils.json_to_sheet(data);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Big12 Picks");
+        XLSX.writeFile(workbook, "Big12_Picks.xlsx");
+    });
+}
+
 </script>
 </body>
 </html>

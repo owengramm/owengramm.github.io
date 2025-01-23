@@ -1,0 +1,218 @@
+body {
+    background-color: #2e2e2e;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #4D1979;
+    color: white;
+    padding: 0;
+    height: 60px; /* Set exact height for uniformity */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 100%; /* Ensure content is centered vertically */
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 100%; /* Match height of header */
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center; /* Align text vertically */
+    height: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Highlight current page */
+.nav-menu a.active {
+    background-color: #f0f0f0; /* Light grey background for current page */
+    color: black; /* Change font color to black */
+    border-radius: 5px;
+}
+
+/* Log Out button styling */
+.logout-button {
+    background-color: blue;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Upset Table Styling */
+.upset-table {
+    width: 80%; /* Slightly wider table for more space */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #d3d3d3; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.upset-table thead {
+    background-color: #BA0C2F; /* Red for upset table header */
+    color: white;
+}
+
+.upset-table thead th {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 15px;
+}
+
+.upset-table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.upset-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row color for readability */
+}
+
+.upset-table tbody tr:hover {
+    background-color: #ddd; /* Row highlight on hover */
+}
+
+.upset-table td {
+    padding: 15px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.upset-table td:first-child {
+    font-weight: bold;
+    text-align: left; /* Align "Upset of the Week" to the left */
+}
+
+/* Promo Table Styling */
+.promo-table {
+    width: 80%; /* Matches the upset table width */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #d3d3d3; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.promo-table thead {
+    background-color: #C28C19; /* Gold for promo table header */
+    color: white;
+}
+
+.promo-table thead th {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 15px;
+}
+
+.promo-table tbody tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.promo-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row color */
+}
+
+.promo-table tbody tr:hover {
+    background-color: #ddd; /* Row highlight on hover */
+}
+
+.promo-table td {
+    padding: 15px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.promo-table td:first-child {
+    font-weight: bold;
+    text-align: left; /* Align promo details to the left */
+}
+
+.promo-table td:last-child {
+    text-align: center; /* Align the wager text box to the center */
+}
+
+/* Textbox Styling */
+input[type="text"], input[type="number"] {
+    width: 90%; /* Wide enough to fit within the cell */
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border: 1px solid #4D1979; /* Highlight textbox with TCU Purple */
+    box-shadow: 0 0 5px #4D1979;
+}
+
+/* Save Picks Button Styling */
+.save-button {
+    background-color: #4D1979;
+    color: white;
+    border: 2px solid white; /* Added white border */
+    padding: 15px 40px; /* Increased padding for a wider button */
+    font-size: 1.2em; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 10%; /* Match the table's side margins */
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #371054;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

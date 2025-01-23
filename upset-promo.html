@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Pick 'Em - Upset and Promo Picks</title>
+    <link rel="stylesheet" href="upset-promo-style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <nav>
+        <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="week-overview.html">Week Overview</a></li>
+            <li><a href="big-twelve.html">Big 12 Picks</a></li>
+            <li><a href="mac-gotw.html">MACtion and GOTW Picks</a></li>
+            <li><a href="upset-promo.html" class="active">Upset and Promo Picks</a></li>
+            <li><a href="futures.html">Futures</a></li>
+            <li><a href="standings.html">Current Standings</a></li>
+        </ul>
+        </nav>
+        <button class="logout-button" onclick="window.location.href='login.html'">Log Out</button>
+    </div>
+</header>
+
+<main>
+    <h1>Upset and Promo Picks</h1>
+    
+    <!-- Upset Pick Table -->
+    <h2>Upset Pick</h2>
+    <table class="upset-table">
+        <thead>
+            <tr>
+                <th>Upset of the Week</th>
+                <th>Spread</th>
+                <th>Wager</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" id="upset-team" placeholder="Enter team"></td>
+                <td><input type="text" id="upset-spread" placeholder="Enter spread"></td>
+                <td><input type="number" id="upset-wager" min="0" max="10" placeholder="0-10"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Promo Table -->
+    <h2>Promo</h2>
+    <table class="promo-table">
+        <thead>
+            <tr>
+                <th>Promo Details</th>
+                <th>Odds</th>
+                <th>Multiple</th>
+                <th>Wager</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>THE LORAX LAY</strong><br>
+                    Duke, Michigan, Nebraska, Texas, and UNT moneyline
+                </td>
+                <td>+305</td>
+                <td>x4</td>
+                <td><input type="number" id="promo-wager" min="0" max="5" placeholder="0-5"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="save-button">Save Picks</button>
+</main>
+
+<script>
+    // Save picks to localStorage
+    document.getElementById("save-button").addEventListener("click", () => {
+        const upsetPick = document.getElementById("upset-team").value;
+        const upsetSpread = document.getElementById("upset-spread").value;
+        const upsetWager = document.getElementById("upset-wager").value;
+        const promoWager = document.getElementById("promo-wager").value;
+
+        if (upsetWager < 0 || upsetWager > 10 || promoWager < 0 || promoWager > 5) {
+            alert("Wager values are out of range!");
+            return;
+        }
+
+        const picks = {
+            upset: { team: upsetPick, spread: upsetSpread, wager: upsetWager },
+            promo: { wager: promoWager },
+        };
+
+        localStorage.setItem("upsetPromoPicks", JSON.stringify(picks));
+        alert("Your picks have been saved!");
+    });
+</script>
+</body>
+</html>

@@ -80,11 +80,12 @@ main {
     text-align: center;
 }
 
-h1 {
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
+img {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    height: 100px;
+    object-fit: cover;
 
 /* Table styling */
 table {

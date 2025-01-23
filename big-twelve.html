@@ -28,7 +28,7 @@
     <!-- Week Selector -->
     <div class="week-selector">
         <label for="week-input">Enter Week Number:</label>
-        <input type="number" id="week-input" min="1" value="1" />
+        <input type="number" id="week-input" min="1" max="14" value="1" />
         <button id="update-week-button">Update</button>
     </div>
     <h1 id="page-title">Week 1 Big 12 Picks</h1>
@@ -47,7 +47,6 @@
                 <!-- Matchups will be dynamically populated -->
             </tbody>
         </table>
-        <button id="save-button">Save Picks</button>
     </div>
 </main>
 
@@ -64,13 +63,15 @@
             .then(data => {
                 picksTable.innerHTML = ""; // Clear the table
 
-                const filteredMatchups = data.filter(matchup => matchup.Week === parseInt(week)); // Get matchups for the selected week
+                // Filter matchups for the selected week
+                const filteredMatchups = data.filter(matchup => matchup.Week === parseInt(week));
 
                 if (filteredMatchups.length > 0) {
+                    // Populate the table with matchups
                     filteredMatchups.forEach(matchup => {
                         const row = document.createElement("tr");
                         row.innerHTML = `
-                            <td><strong>${matchup.Matchup}</strong></td>
+                            <td>${matchup.Matchup}</td>
                             <td>
                                 <label>
                                     <input type="radio" name="${matchup['Unique ID']}" value="${matchup['Away Team']}" required>
@@ -87,6 +88,7 @@
                         picksTable.appendChild(row);
                     });
                 } else {
+                    // Display a message if no matchups are found for the selected week
                     picksTable.innerHTML = `<tr><td colspan="3">No matchups available for Week ${week}.</td></tr>`;
                 }
             })

@@ -26,7 +26,12 @@
 </header>
 
 <main>
-    <h1>Big 12 Picks</h1>
+    <div class="week-selector">
+        <label for="week-input">Enter Week Number:</label>
+        <input type="number" id="week-input" min="1" value="1" />
+        <button id="update-week-button">Update</button>
+    </div>
+    <h1 id="page-title">Week 1 Big 12 Picks</h1>
     <div class="matchups-container">
         <table id="picks-table">
             <thead>
@@ -45,71 +50,60 @@
 </main>
 
 <script>
-    // Matchups data
-    const matchups = [
-        { id: 1, team1: "TCU", team2: "Baylor" },
-        { id: 2, team1: "Texas", team2: "Oklahoma" },
-        { id: 3, team1: "Kansas State", team2: "Iowa State" },
-        { id: 4, team1: "Texas Tech", team2: "West Virginia" },
-        { id: 5, team1: "Kansas", team2: "Oklahoma State" }
-    ];
-
+    const weekInput = document.getElementById("week-input");
+    const updateWeekButton = document.getElementById("update-week-button");
+    const pageTitle = document.getElementById("page-title");
     const picksTable = document.querySelector("#picks-table tbody");
 
-    // Populate matchups
-    matchups.forEach((matchup) => {
-        const row = document.createElement("tr");
+    // Function to load matchups from the JSON file for the selected week
+    function loadMatchups(week) {
+        fetch("./data/big-twelve-2024.json")
+            .then(response => response.json())
+            .then(data => {
+                const matchups = data[`week${week}`];
+                picksTable.innerHTML = ""; // Clear the table
 
-        row.innerHTML = `
-            <td><strong>${matchup.team1} vs ${matchup.team2}</strong></td>
-            <td>
-                <label>
-                    <input type="radio" name="matchup-${matchup.id}" value="${matchup.team1}" required>
-                    ${matchup.team1}
-                </label>
-            </td>
-            <td>
-                <label>
-                    <input type="radio" name="matchup-${matchup.id}" value="${matchup.team2}" required>
-                    ${matchup.team2}
-                </label>
-            </td>
-        `;
+                if (matchups) {
+                    matchups.forEach(matchup => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td><strong>${matchup.team1} vs ${matchup.team2}</strong></td>
+                            <td>
+                                <label>
+                                    <input type="radio" name="matchup-${matchup.matchup_id}" value="${matchup.team1}" required>
+                                    ${matchup.team1}
+                                </label>
+                            </td>
+                            <td>
+                                <label>
+                                    <input type="radio" name="matchup-${matchup.matchup_id}" value="${matchup.team2}" required>
+                                    ${matchup.team2}
+                                </label>
+                            </td>
+                        `;
+                        picksTable.appendChild(row);
+                    });
+                } else {
+                    picksTable.innerHTML = `<tr><td colspan="3">No matchups available for Week ${week}.</td></tr>`;
+                }
+            })
+            .catch(error => console.error("Error loading matchups:", error));
+    }
 
-        picksTable.appendChild(row);
+    // Function to update the page title and load matchups for the selected week
+    function updateWeek() {
+        const selectedWeek = weekInput.value;
+        pageTitle.textContent = `Week ${selectedWeek} Big 12 Picks`;
+        loadMatchups(selectedWeek);
+    }
+
+    // Set up initial page load
+    document.addEventListener("DOMContentLoaded", () => {
+        updateWeek(); // Load matchups for the default week (Week 1)
     });
 
-    document.getElementById("save-button").addEventListener("click", () => {
-        const formData = new FormData(document.querySelector("#picks-table"));
-        const picks = {};
-
-        matchups.forEach((matchup) => {
-            picks[matchup.id] = formData.get(`matchup-${matchup.id}`);
-        });
-
-        // Save picks for the current user
-        const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
-        allPicks[currentUser] = picks; // Save under the current user's name
-        localStorage.setItem("big12Picks", JSON.stringify(allPicks));
-
-        alert("Your picks have been saved!");
-    });
-
-    // Load existing picks
-    window.onload = () => {
-        const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
-        const userPicks = allPicks[currentUser] || {};
-
-        matchups.forEach((matchup) => {
-            const selectedTeam = userPicks[matchup.id];
-            if (selectedTeam) {
-                const radio = document.querySelector(
-                    `input[name="matchup-${matchup.id}"][value="${selectedTeam}"]`
-                );
-                if (radio) radio.checked = true;
-            }
-        });
-    };
+    // Update matchups when the "Update" button is clicked
+    updateWeekButton.addEventListener("click", updateWeek);
 </script>
 </body>
 </html>

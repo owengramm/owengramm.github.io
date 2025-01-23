@@ -42,11 +42,19 @@ header {
     display: flex;
     align-items: center; /* Align text vertically */
     height: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-menu a:hover {
     background-color: #555;
     border-radius: 5px;
+}
+
+/* Highlight current page */
+.nav-menu a.active {
+    background-color: #f0f0f0; /* Light grey background for current page */
+    color: black; /* Change font color to black */
+    border-radius: 5px; /* Optional for rounded corners */
 }
 
 /* Log Out button styling */

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Pick 'Em - MAC and GOTW Picks</title>
+    <link rel="stylesheet" href="mac-gotw-style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <nav>
+        <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="week-overview.html">Week Overview</a></li>
+            <li><a href="big-twelve.html">Big 12 Picks</a></li>
+            <li><a href="mac-gotw.html" class="active">MACtion and GOTW Picks</a></li>
+            <li><a href="upset-promo.html">Upset and Promo Picks</a></li>
+            <li><a href="futures.html">Futures</a></li>
+            <li><a href="standings.html">Current Standings</a></li>
+        </ul>
+        </nav>
+        <button class="logout-button" onclick="window.location.href='login.html'">Log Out</button>
+    </div>
+</header>
+
+<main>
+    <h1>MAC Picks!</h1>
+    <div class="matchups-container">
+        <table id="mac-table">
+            <thead>
+                <tr>
+                    <th>Matchup</th>
+                    <th>Away Team</th>
+                    <th>Home Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ohio vs Northern Illinois</strong></td>
+                    <td>
+                        <label>
+                            <input type="radio" name="mac-matchup-1" value="Ohio" required>
+                            Ohio
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="mac-matchup-1" value="Northern Illinois" required>
+                            Northern Illinois
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h1>GOTW Picks!</h1>
+    <div class="matchups-container">
+        <table id="gotw-table">
+            <thead>
+                <tr>
+                    <th>Matchup</th>
+                    <th>Away Team</th>
+                    <th>Home Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Army vs UNT</strong></td>
+                    <td>
+                        <label>
+                            <input type="radio" name="gotw-matchup-1" value="Army" required>
+                            Army
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="gotw-matchup-1" value="UNT" required>
+                            UNT
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Georgia vs Ole Miss</strong></td>
+                    <td>
+                        <label>
+                            <input type="radio" name="gotw-matchup-2" value="Georgia" required>
+                            Georgia
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="gotw-matchup-2" value="Ole Miss" required>
+                            Ole Miss
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Alabama vs LSU</strong></td>
+                    <td>
+                        <label>
+                            <input type="radio" name="gotw-matchup-3" value="Alabama" required>
+                            Alabama
+                        </label>
+                    </td>
+                    <td>
+                        <label>
+                            <input type="radio" name="gotw-matchup-3" value="LSU" required>
+                            LSU
+                        </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button id="save-button">Save Picks</button>
+</main>
+
+<script>
+    // User login simulation
+    const currentUser = "Griffin";
+
+    // Save picks to localStorage
+    document.getElementById("save-button").addEventListener("click", () => {
+        const formData = new FormData();
+
+        // Collect MAC picks
+        const macPick = document.querySelector('input[name="mac-matchup-1"]:checked');
+        if (macPick) {
+            formData.append("mac-matchup-1", macPick.value);
+        }
+
+        // Collect GOTW picks
+        const gotwPicks = ["gotw-matchup-1", "gotw-matchup-2", "gotw-matchup-3"];
+        gotwPicks.forEach((matchup) => {
+            const pick = document.querySelector(`input[name="${matchup}"]:checked`);
+            if (pick) {
+                formData.append(matchup, pick.value);
+            }
+        });
+
+        // Save picks in localStorage
+        const allPicks = JSON.parse(localStorage.getItem("macGotwPicks")) || {};
+        allPicks[currentUser] = Object.fromEntries(formData);
+        localStorage.setItem("macGotwPicks", JSON.stringify(allPicks));
+
+        alert("Your picks have been saved!");
+    });
+
+    // Load existing picks
+    window.onload = () => {
+        const allPicks = JSON.parse(localStorage.getItem("macGotwPicks")) || {};
+        const userPicks = allPicks[currentUser] || {};
+
+        // Pre-fill MAC picks
+        if (userPicks["mac-matchup-1"]) {
+            const macPick = document.querySelector(
+                `input[name="mac-matchup-1"][value="${userPicks["mac-matchup-1"]}"]`
+            );
+            if (macPick) macPick.checked = true;
+        }
+
+        // Pre-fill GOTW picks
+        ["gotw-matchup-1", "gotw-matchup-2", "gotw-matchup-3"].forEach((matchup) => {
+            if (userPicks[matchup]) {
+                const gotwPick = document.querySelector(
+                    `input[name="${matchup}"][value="${userPicks[matchup]}"]`
+                );
+                if (gotwPick) gotwPick.checked = true;
+            }
+        });
+    };
+</script>
+</body>
+</html>

@@ -130,7 +130,7 @@ td:first-child {
     font-weight: bold; /* Bold for the Matchup column */
 }
 
-button {
+.save-button {
     background-color: #4D1979;
     color: white;
     border: 2px solid white; /* Added white border */

@@ -98,7 +98,7 @@ table {
 }
 
 thead {
-    background-color: #4D1979; /* TCU Purple */
+    background-color: #009CDE; /* NCAA Blue */
     color: white;
 }
 
@@ -132,7 +132,7 @@ td:first-child {
 }
 
 td:last-child {
-    color: #4D1979; /* Use TCU Purple for "Point Value" column */
+    color: #black; /* Use TCU Purple for "Point Value" column */
     font-weight: bold;
 }
 

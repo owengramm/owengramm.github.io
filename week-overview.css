@@ -77,9 +77,9 @@ main {
     background-color: #f0f0f0; /* Light gray */
     color: black;
     border-radius: 8px;
-    padding: 20px; /* Adjust padding for spacing */
+    padding: 20px; /* Uniform padding: 20px all around */
     max-width: 75%; /* Set width to a percentage for responsiveness */
-    margin: 20px auto; /* Center align */
+    margin: 20px auto; /* Center align and set vertical margin */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: left; /* Left align text content */
 }
@@ -97,10 +97,11 @@ h1, h2 {
     background-color: #f0f0f0;
     color: black;
     border-radius: 8px;
-    padding: 20px;
+    padding: 20px; /* Uniform padding: 20px all around */
     max-width: 75%; /* Matches the week box */
-    margin: 20px auto;
+    margin: 20px auto; /* Center align and set vertical margin */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Left align text content */
 }
 
 /* General button styling */

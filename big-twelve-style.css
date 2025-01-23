@@ -80,25 +80,11 @@ main {
     text-align: center;
 }
 
-/* Header with Logo Styling */
-.header-with-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center horizontally */
-    margin-bottom: 20px;
-}
-
-.header-with-logo h1 {
+h1 {
     color: white;
-    font-size: 2em;
-    margin: 0 20px 0 0; /* Add spacing to the right of the header */
+    padding: 10px;
+    text-align: center;
 }
-
-.header-with-logo img {
-    height: 2em; /* Matches the height of the header font size */
-    object-fit: contain; /* Ensures the image retains its aspect ratio */
-}
-
 
 /* Table styling */
 table {

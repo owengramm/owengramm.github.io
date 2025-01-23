@@ -1,0 +1,828 @@
+[
+  {
+    "Week": 1,
+    "Matchup": "New Hampshire at UCF",
+    "Away Team": "New Hampshire",
+    "Home Team": "UCF",
+    "Unique ID": "1.1.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "North Dakota State at Colorado",
+    "Away Team": "North Dakota State",
+    "Home Team": "Colorado",
+    "Unique ID": "1.2.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "Lindenwood at Kansas",
+    "Away Team": "Lindenwood",
+    "Home Team": "Kansas",
+    "Unique ID": "1.3.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "Southern Utah at Utah",
+    "Away Team": "Southern Utah",
+    "Home Team": "Utah",
+    "Unique ID": "1.4.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "TCU at Stanford",
+    "Away Team": "TCU",
+    "Home Team": "Stanford",
+    "Unique ID": "1.5.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "Penn State at West Virginia",
+    "Away Team": "Penn State",
+    "Home Team": "West Virginia",
+    "Unique ID": "1.6.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "South Dakota State at Oklahoma State",
+    "Away Team": "South Dakota State",
+    "Home Team": "Oklahoma State",
+    "Unique ID": "1.7.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "Towson at Cincinnati",
+    "Away Team": "Towson",
+    "Home Team": "Cincinnati",
+    "Unique ID": "1.8.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "North Dakota at Iowa State",
+    "Away Team": "North Dakota",
+    "Home Team": "Iowa State",
+    "Unique ID": "1.9.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "UNLV at Houston",
+    "Away Team": "UNLV",
+    "Home Team": "Houston",
+    "Unique ID": "1.10.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "UT Martin at Kansas State",
+    "Away Team": "UT Martin",
+    "Home Team": "Kansas State",
+    "Unique ID": "1.11.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "Tarleton State at Baylor",
+    "Away Team": "Tarleton State",
+    "Home Team": "Baylor",
+    "Unique ID": "1.12.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "Abilene Christian at Texas Tech",
+    "Away Team": "Abilene Christian",
+    "Home Team": "Texas Tech",
+    "Unique ID": "1.13.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "Southern Illinois at BYU",
+    "Away Team": "Southern Illinois",
+    "Home Team": "BYU",
+    "Unique ID": "1.14.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "Wyoming at Arizona State",
+    "Away Team": "Wyoming",
+    "Home Team": "Arizona State",
+    "Unique ID": "1.15.Big12"
+  },
+  {
+    "Week": 1,
+    "Matchup": "New Mexico at Arizona",
+    "Away Team": "New Mexico",
+    "Home Team": "Arizona",
+    "Unique ID": "1.16.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "BYU at SMU",
+    "Away Team": "BYU",
+    "Home Team": "SMU",
+    "Unique ID": "2.1.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Arkansas at Oklahoma State",
+    "Away Team": "Arkansas",
+    "Home Team": "Oklahoma State",
+    "Unique ID": "2.2.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Pittsburgh at Cincinnati",
+    "Away Team": "Pittsburgh",
+    "Home Team": "Cincinnati",
+    "Unique ID": "2.3.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Kansas State at Tulane",
+    "Away Team": "Kansas State",
+    "Home Team": "Tulane",
+    "Unique ID": "2.4.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Iowa State at Iowa",
+    "Away Team": "Iowa State",
+    "Home Team": "Iowa",
+    "Unique ID": "2.5.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Baylor at Utah",
+    "Away Team": "Baylor",
+    "Home Team": "Utah",
+    "Unique ID": "2.6.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "UAlbany at West Virginia",
+    "Away Team": "UAlbany",
+    "Home Team": "West Virginia",
+    "Unique ID": "2.7.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Sam Houston at UCF",
+    "Away Team": "Sam Houston",
+    "Home Team": "UCF",
+    "Unique ID": "2.8.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Kansas at Illinois",
+    "Away Team": "Kansas",
+    "Home Team": "Illinois",
+    "Unique ID": "2.9.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Colorado at Nebraska",
+    "Away Team": "Colorado",
+    "Home Team": "Nebraska",
+    "Unique ID": "2.10.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Houston at Oklahoma",
+    "Away Team": "Houston",
+    "Home Team": "Oklahoma",
+    "Unique ID": "2.11.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Long Island University at TCU",
+    "Away Team": "Long Island University",
+    "Home Team": "TCU",
+    "Unique ID": "2.12.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Northern Arizona at Arizona",
+    "Away Team": "Northern Arizona",
+    "Home Team": "Arizona",
+    "Unique ID": "2.13.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Texas Tech at Washington State",
+    "Away Team": "Texas Tech",
+    "Home Team": "Washington State",
+    "Unique ID": "2.14.Big12"
+  },
+  {
+    "Week": 2,
+    "Matchup": "Mississippi State at Arizona State",
+    "Away Team": "Mississippi State",
+    "Home Team": "Arizona State",
+    "Unique ID": "2.15.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "Arizona State at Texas State",
+    "Away Team": "Arizona State",
+    "Home Team": "Texas State",
+    "Unique ID": "3.1.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "UNLV at Kansas",
+    "Away Team": "UNLV",
+    "Home Team": "Kansas",
+    "Unique ID": "3.2.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "Arizona at Kansas State",
+    "Away Team": "Arizona",
+    "Home Team": "Kansas State",
+    "Unique ID": "3.3.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "Cincinnati at Miami (OH)",
+    "Away Team": "Cincinnati",
+    "Home Team": "Miami (OH)",
+    "Unique ID": "3.4.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "North Texas at Texas Tech",
+    "Away Team": "North Texas",
+    "Home Team": "Texas Tech",
+    "Unique ID": "3.5.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "Oklahoma State at Tulsa",
+    "Away Team": "Oklahoma State",
+    "Home Team": "Tulsa",
+    "Unique ID": "3.6.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "West Virginia at Pittsburgh",
+    "Away Team": "West Virginia",
+    "Home Team": "Pittsburgh",
+    "Unique ID": "3.7.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "Utah at Utah State",
+    "Away Team": "Utah",
+    "Home Team": "Utah State",
+    "Unique ID": "3.8.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "Colorado at Colorado State",
+    "Away Team": "Colorado",
+    "Home Team": "Colorado State",
+    "Unique ID": "3.9.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "Air Force at Baylor",
+    "Away Team": "Air Force",
+    "Home Team": "Baylor",
+    "Unique ID": "3.10.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "UCF at TCU",
+    "Away Team": "UCF",
+    "Home Team": "TCU",
+    "Unique ID": "3.11.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "Rice at Houston",
+    "Away Team": "Rice",
+    "Home Team": "Houston",
+    "Unique ID": "3.12.Big12"
+  },
+  {
+    "Week": 3,
+    "Matchup": "BYU at Wyoming",
+    "Away Team": "BYU",
+    "Home Team": "Wyoming",
+    "Unique ID": "3.13.Big12"
+  },
+  {
+    "Week": 4,
+    "Matchup": "Kansas at West Virginia",
+    "Away Team": "Kansas",
+    "Home Team": "West Virginia",
+    "Unique ID": "4.1.Big12"
+  },
+  {
+    "Week": 4,
+    "Matchup": "Houston at Cincinnati",
+    "Away Team": "Houston",
+    "Home Team": "Cincinnati",
+    "Unique ID": "4.2.Big12"
+  },
+  {
+    "Week": 4,
+    "Matchup": "Arkansas State at Iowa State",
+    "Away Team": "Arkansas State",
+    "Home Team": "Iowa State",
+    "Unique ID": "4.3.Big12"
+  },
+  {
+    "Week": 4,
+    "Matchup": "Arizona State at Texas Tech",
+    "Away Team": "Arizona State",
+    "Home Team": "Texas Tech",
+    "Unique ID": "4.4.Big12"
+  },
+  {
+    "Week": 4,
+    "Matchup": "Utah at Oklahoma State",
+    "Away Team": "Utah",
+    "Home Team": "Oklahoma State",
+    "Unique ID": "4.5.Big12"
+  },
+  {
+    "Week": 4,
+    "Matchup": "TCU at SMU",
+    "Away Team": "TCU",
+    "Home Team": "SMU",
+    "Unique ID": "4.6.Big12"
+  },
+  {
+    "Week": 4,
+    "Matchup": "Baylor at Colorado",
+    "Away Team": "Baylor",
+    "Home Team": "Colorado",
+    "Unique ID": "4.7.Big12"
+  },
+  {
+    "Week": 4,
+    "Matchup": "Kansas State at BYU",
+    "Away Team": "Kansas State",
+    "Home Team": "BYU",
+    "Unique ID": "4.8.Big12"
+  },
+  {
+    "Week": 5,
+    "Matchup": "BYU at Baylor",
+    "Away Team": "BYU",
+    "Home Team": "Baylor",
+    "Unique ID": "5.1.Big12"
+  },
+  {
+    "Week": 5,
+    "Matchup": "Oklahoma State at Kansas State",
+    "Away Team": "Oklahoma State",
+    "Home Team": "Kansas State",
+    "Unique ID": "5.2.Big12"
+  },
+  {
+    "Week": 5,
+    "Matchup": "TCU at Kansas",
+    "Away Team": "TCU",
+    "Home Team": "Kansas",
+    "Unique ID": "5.3.Big12"
+  },
+  {
+    "Week": 5,
+    "Matchup": "Colorado at UCF",
+    "Away Team": "Colorado",
+    "Home Team": "UCF",
+    "Unique ID": "5.4.Big12"
+  },
+  {
+    "Week": 5,
+    "Matchup": "Iowa State at Houston",
+    "Away Team": "Iowa State",
+    "Home Team": "Houston",
+    "Unique ID": "5.5.Big12"
+  },
+  {
+    "Week": 5,
+    "Matchup": "Cincinnati at Texas Tech",
+    "Away Team": "Cincinnati",
+    "Home Team": "Texas Tech",
+    "Unique ID": "5.6.Big12"
+  },
+  {
+    "Week": 5,
+    "Matchup": "Arizona at Utah",
+    "Away Team": "Arizona",
+    "Home Team": "Utah",
+    "Unique ID": "5.7.Big12"
+  },
+  {
+    "Week": 6,
+    "Matchup": "Houston at TCU",
+    "Away Team": "Houston",
+    "Home Team": "TCU",
+    "Unique ID": "6.1.Big12"
+  },
+  {
+    "Week": 6,
+    "Matchup": "West Virginia at Oklahoma State",
+    "Away Team": "West Virginia",
+    "Home Team": "Oklahoma State",
+    "Unique ID": "6.2.Big12"
+  },
+  {
+    "Week": 6,
+    "Matchup": "Baylor at Iowa State",
+    "Away Team": "Baylor",
+    "Home Team": "Iowa State",
+    "Unique ID": "6.3.Big12"
+  },
+  {
+    "Week": 6,
+    "Matchup": "UCF at Florida",
+    "Away Team": "UCF",
+    "Home Team": "Florida",
+    "Unique ID": "6.4.Big12"
+  },
+  {
+    "Week": 6,
+    "Matchup": "Kansas at Arizona State",
+    "Away Team": "Kansas",
+    "Home Team": "Arizona State",
+    "Unique ID": "6.5.Big12"
+  },
+  {
+    "Week": 6,
+    "Matchup": "Texas Tech at Arizona",
+    "Away Team": "Texas Tech",
+    "Home Team": "Arizona",
+    "Unique ID": "6.6.Big12"
+  },
+  {
+    "Week": 7,
+    "Matchup": "Utah at Arizona State",
+    "Away Team": "Utah",
+    "Home Team": "Arizona State",
+    "Unique ID": "7.1.Big12"
+  },
+  {
+    "Week": 7,
+    "Matchup": "Cincinnati at UCF",
+    "Away Team": "Cincinnati",
+    "Home Team": "UCF",
+    "Unique ID": "7.2.Big12"
+  },
+  {
+    "Week": 7,
+    "Matchup": "Arizona at BYU",
+    "Away Team": "Arizona",
+    "Home Team": "BYU",
+    "Unique ID": "7.3.Big12"
+  },
+  {
+    "Week": 7,
+    "Matchup": "Iowa State at West Virginia",
+    "Away Team": "Iowa State",
+    "Home Team": "West Virginia",
+    "Unique ID": "7.4.Big12"
+  },
+  {
+    "Week": 7,
+    "Matchup": "Kansas State at Colorado",
+    "Away Team": "Kansas State",
+    "Home Team": "Colorado",
+    "Unique ID": "7.5.Big12"
+  },
+  {
+    "Week": 8,
+    "Matchup": "Oklahoma State at BYU",
+    "Away Team": "Oklahoma State",
+    "Home Team": "BYU",
+    "Unique ID": "8.1.Big12"
+  },
+  {
+    "Week": 8,
+    "Matchup": "Arizona State at Cincinnati",
+    "Away Team": "Arizona State",
+    "Home Team": "Cincinnati",
+    "Unique ID": "8.2.Big12"
+  },
+  {
+    "Week": 8,
+    "Matchup": "Houston at Kansas",
+    "Away Team": "Houston",
+    "Home Team": "Kansas",
+    "Unique ID": "8.3.Big12"
+  },
+  {
+    "Week": 8,
+    "Matchup": "Baylor at Texas Tech",
+    "Away Team": "Baylor",
+    "Home Team": "Texas Tech",
+    "Unique ID": "8.4.Big12"
+  },
+  {
+    "Week": 8,
+    "Matchup": "Colorado at Arizona",
+    "Away Team": "Colorado",
+    "Home Team": "Arizona",
+    "Unique ID": "8.5.Big12"
+  },
+  {
+    "Week": 8,
+    "Matchup": "UCF at Iowa State",
+    "Away Team": "UCF",
+    "Home Team": "Iowa State",
+    "Unique ID": "8.6.Big12"
+  },
+  {
+    "Week": 8,
+    "Matchup": "Kansas State at West Virginia",
+    "Away Team": "Kansas State",
+    "Home Team": "West Virginia",
+    "Unique ID": "8.7.Big12"
+  },
+  {
+    "Week": 8,
+    "Matchup": "TCU at Utah",
+    "Away Team": "TCU",
+    "Home Team": "Utah",
+    "Unique ID": "8.8.Big12"
+  },
+  {
+    "Week": 9,
+    "Matchup": "Texas Tech at TCU",
+    "Away Team": "Texas Tech",
+    "Home Team": "TCU",
+    "Unique ID": "9.1.Big12"
+  },
+  {
+    "Week": 9,
+    "Matchup": "BYU at UCF",
+    "Away Team": "BYU",
+    "Home Team": "UCF",
+    "Unique ID": "9.2.Big12"
+  },
+  {
+    "Week": 9,
+    "Matchup": "Oklahoma State at Baylor",
+    "Away Team": "Oklahoma State",
+    "Home Team": "Baylor",
+    "Unique ID": "9.3.Big12"
+  },
+  {
+    "Week": 9,
+    "Matchup": "Utah at Houston",
+    "Away Team": "Utah",
+    "Home Team": "Houston",
+    "Unique ID": "9.4.Big12"
+  },
+  {
+    "Week": 9,
+    "Matchup": "West Virginia at Arizona",
+    "Away Team": "West Virginia",
+    "Home Team": "Arizona",
+    "Unique ID": "9.5.Big12"
+  },
+  {
+    "Week": 9,
+    "Matchup": "Kansas at Kansas State",
+    "Away Team": "Kansas",
+    "Home Team": "Kansas State",
+    "Unique ID": "9.6.Big12"
+  },
+  {
+    "Week": 9,
+    "Matchup": "Cincinnati at Colorado",
+    "Away Team": "Cincinnati",
+    "Home Team": "Colorado",
+    "Unique ID": "9.7.Big12"
+  },
+  {
+    "Week": 10,
+    "Matchup": "Kansas State at Houston",
+    "Away Team": "Kansas State",
+    "Home Team": "Houston",
+    "Unique ID": "10.1.Big12"
+  },
+  {
+    "Week": 10,
+    "Matchup": "Arizona at UCF",
+    "Away Team": "Arizona",
+    "Home Team": "UCF",
+    "Unique ID": "10.2.Big12"
+  },
+  {
+    "Week": 10,
+    "Matchup": "Texas Tech at Iowa State",
+    "Away Team": "Texas Tech",
+    "Home Team": "Iowa State",
+    "Unique ID": "10.3.Big12"
+  },
+  {
+    "Week": 10,
+    "Matchup": "Arizona State at Oklahoma State",
+    "Away Team": "Arizona State",
+    "Home Team": "Oklahoma State",
+    "Unique ID": "10.4.Big12"
+  },
+  {
+    "Week": 10,
+    "Matchup": "TCU at Baylor",
+    "Away Team": "TCU",
+    "Home Team": "Baylor",
+    "Unique ID": "10.5.Big12"
+  },
+  {
+    "Week": 11,
+    "Matchup": "West Virginia at Cincinnati",
+    "Away Team": "West Virginia",
+    "Home Team": "Cincinnati",
+    "Unique ID": "11.1.Big12"
+  },
+  {
+    "Week": 11,
+    "Matchup": "Iowa State at Kansas",
+    "Away Team": "Iowa State",
+    "Home Team": "Kansas",
+    "Unique ID": "11.2.Big12"
+  },
+  {
+    "Week": 11,
+    "Matchup": "Colorado at Texas Tech",
+    "Away Team": "Colorado",
+    "Home Team": "Texas Tech",
+    "Unique ID": "11.3.Big12"
+  },
+  {
+    "Week": 11,
+    "Matchup": "Oklahoma State at TCU",
+    "Away Team": "Oklahoma State",
+    "Home Team": "TCU",
+    "Unique ID": "11.4.Big12"
+  },
+  {
+    "Week": 11,
+    "Matchup": "UCF at Arizona State",
+    "Away Team": "UCF",
+    "Home Team": "Arizona State",
+    "Unique ID": "11.5.Big12"
+  },
+  {
+    "Week": 11,
+    "Matchup": "BYU at Utah",
+    "Away Team": "BYU",
+    "Home Team": "Utah",
+    "Unique ID": "11.6.Big12"
+  },
+  {
+    "Week": 12,
+    "Matchup": "Houston at Arizona",
+    "Away Team": "Houston",
+    "Home Team": "Arizona",
+    "Unique ID": "12.1.Big12"
+  },
+  {
+    "Week": 12,
+    "Matchup": "Utah at Colorado",
+    "Away Team": "Utah",
+    "Home Team": "Colorado",
+    "Unique ID": "12.2.Big12"
+  },
+  {
+    "Week": 12,
+    "Matchup": "Baylor at West Virginia",
+    "Away Team": "Baylor",
+    "Home Team": "West Virginia",
+    "Unique ID": "12.3.Big12"
+  },
+  {
+    "Week": 12,
+    "Matchup": "Arizona State at Kansas State",
+    "Away Team": "Arizona State",
+    "Home Team": "Kansas State",
+    "Unique ID": "12.4.Big12"
+  },
+  {
+    "Week": 12,
+    "Matchup": "Cincinnati at Iowa State",
+    "Away Team": "Cincinnati",
+    "Home Team": "Iowa State",
+    "Unique ID": "12.5.Big12"
+  },
+  {
+    "Week": 12,
+    "Matchup": "Kansas at BYU",
+    "Away Team": "Kansas",
+    "Home Team": "BYU",
+    "Unique ID": "12.6.Big12"
+  },
+  {
+    "Week": 13,
+    "Matchup": "Arizona at TCU",
+    "Away Team": "Arizona",
+    "Home Team": "TCU",
+    "Unique ID": "13.1.Big12"
+  },
+  {
+    "Week": 13,
+    "Matchup": "Texas Tech at Oklahoma State",
+    "Away Team": "Texas Tech",
+    "Home Team": "Oklahoma State",
+    "Unique ID": "13.2.Big12"
+  },
+  {
+    "Week": 13,
+    "Matchup": "Colorado at Kansas",
+    "Away Team": "Colorado",
+    "Home Team": "Kansas",
+    "Unique ID": "13.3.Big12"
+  },
+  {
+    "Week": 13,
+    "Matchup": "UCF at West Virginia",
+    "Away Team": "UCF",
+    "Home Team": "West Virginia",
+    "Unique ID": "13.4.Big12"
+  },
+  {
+    "Week": 13,
+    "Matchup": "BYU at Arizona State",
+    "Away Team": "BYU",
+    "Home Team": "Arizona State",
+    "Unique ID": "13.5.Big12"
+  },
+  {
+    "Week": 13,
+    "Matchup": "Baylor at Houston",
+    "Away Team": "Baylor",
+    "Home Team": "Houston",
+    "Unique ID": "13.6.Big12"
+  },
+  {
+    "Week": 13,
+    "Matchup": "Iowa State at Utah",
+    "Away Team": "Iowa State",
+    "Home Team": "Utah",
+    "Unique ID": "13.7.Big12"
+  },
+  {
+    "Week": 13,
+    "Matchup": "Cincinnati at Kansas State",
+    "Away Team": "Cincinnati",
+    "Home Team": "Kansas State",
+    "Unique ID": "13.8.Big12"
+  },
+  {
+    "Week": 14,
+    "Matchup": "Oklahoma State at Colorado",
+    "Away Team": "Oklahoma State",
+    "Home Team": "Colorado",
+    "Unique ID": "14.1.Big12"
+  },
+  {
+    "Week": 14,
+    "Matchup": "Utah at UCF",
+    "Away Team": "Utah",
+    "Home Team": "UCF",
+    "Unique ID": "14.2.Big12"
+  },
+  {
+    "Week": 14,
+    "Matchup": "West Virginia at Texas Tech",
+    "Away Team": "West Virginia",
+    "Home Team": "Texas Tech",
+    "Unique ID": "14.3.Big12"
+  },
+  {
+    "Week": 14,
+    "Matchup": "Kansas at Baylor",
+    "Away Team": "Kansas",
+    "Home Team": "Baylor",
+    "Unique ID": "14.4.Big12"
+  },
+  {
+    "Week": 14,
+    "Matchup": "Arizona State at Arizona",
+    "Away Team": "Arizona State",
+    "Home Team": "Arizona",
+    "Unique ID": "14.5.Big12"
+  },
+  {
+    "Week": 14,
+    "Matchup": "TCU at Cincinnati",
+    "Away Team": "TCU",
+    "Home Team": "Cincinnati",
+    "Unique ID": "14.6.Big12"
+  },
+  {
+    "Week": 14,
+    "Matchup": "Kansas State at Iowa State",
+    "Away Team": "Kansas State",
+    "Home Team": "Iowa State",
+    "Unique ID": "14.7.Big12"
+  },
+  {
+    "Week": 14,
+    "Matchup": "Houston at BYU",
+    "Away Team": "Houston",
+    "Home Team": "BYU",
+    "Unique ID": "14.8.Big12"
+  }
+]

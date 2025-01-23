@@ -10,15 +10,15 @@
 <header>
     <div class="header-container">
         <nav>
-            <ul class="nav-menu">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="week-overview.html">Week Overview</a></li>
-                <li><a href="big-twelve.html">Big 12 Picks</a></li>
-                <li><a href="mac-gotw.html">MACtion and GOTW Picks</a></li>
-                <li><a href="upset-promo.html">Upset and Promo Picks</a></li>
-                <li><a href="futures.html">Futures</a></li>
-                <li><a href="standings.html">Current Standings</a></li>
-            </ul>
+        <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="week-overview.html">Week Overview</a></li>
+            <li><a href="big-twelve.html" class="active">Big 12 Picks</a></li>
+            <li><a href="mac-gotw.html">MACtion and GOTW Picks</a></li>
+            <li><a href="upset-promo.html">Upset and Promo Picks</a></li>
+            <li><a href="futures.html">Futures</a></li>
+            <li><a href="standings.html">Current Standings</a></li>
+        </ul>
         </nav>
         <button class="logout-button" onclick="window.location.href='login.html'">Log Out</button>
     </div>
@@ -27,9 +27,18 @@
 <main>
     <h1>Big 12 Picks!</h1>
     <div class="matchups-container">
-        <form id="picks-form">
-            <!-- Matchups will be dynamically populated -->
-        </form>
+        <table id="picks-table">
+            <thead>
+                <tr>
+                    <th>Matchup</th>
+                    <th>Away Team</th>
+                    <th>Home Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Matchups will be dynamically populated -->
+            </tbody>
+        </table>
         <button id="save-button">Save Picks</button>
     </div>
 </main>
@@ -47,33 +56,34 @@
         { id: 5, team1: "Kansas", team2: "Oklahoma State" }
     ];
 
-    const picksForm = document.getElementById("picks-form");
+    const picksTable = document.querySelector("#picks-table tbody");
 
     // Populate matchups
     matchups.forEach((matchup) => {
-        const matchupBox = document.createElement("div");
-        matchupBox.className = "matchup-box";
+        const row = document.createElement("tr");
 
-        matchupBox.innerHTML = `
-            <div class="matchup-title"><strong>${matchup.team1} vs ${matchup.team2}</strong></div>
-            <div class="matchup-option">
+        row.innerHTML = `
+            <td><strong>${matchup.team1} vs ${matchup.team2}</strong></td>
+            <td>
                 <label>
                     <input type="radio" name="matchup-${matchup.id}" value="${matchup.team1}" required>
                     ${matchup.team1}
                 </label>
+            </td>
+            <td>
                 <label>
                     <input type="radio" name="matchup-${matchup.id}" value="${matchup.team2}" required>
                     ${matchup.team2}
                 </label>
-            </div>
+            </td>
         `;
 
-        picksForm.appendChild(matchupBox);
+        picksTable.appendChild(row);
     });
 
     // Save picks to localStorage
     document.getElementById("save-button").addEventListener("click", () => {
-        const formData = new FormData(picksForm);
+        const formData = new FormData(document.querySelector("#picks-table"));
         const picks = {};
 
         matchups.forEach((matchup) => {

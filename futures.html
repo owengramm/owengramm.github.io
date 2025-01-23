@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFB Pick 'Em - Futures</title>
+    <link rel="stylesheet" href="futures-style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="week-overview.html">Week Overview</a></li>
+                <li><a href="big-twelve.html">Big 12 Picks</a></li>
+                <li><a href="mac-gotw.html">MACtion and GOTW Picks</a></li>
+                <li><a href="upset-promo.html">Upset and Promo Picks</a></li>
+                <li><a href="futures.html" class="active">Futures</a></li>
+                <li><a href="standings.html">Current Standings</a></li>
+            </ul>
+        </nav>
+        <button class="logout-button" onclick="window.location.href='login.html'">Log Out</button>
+    </div>
+</header>
+
+<main>
+    <h1>Futures</h1>
+    <div class="futures-container">
+        <table id="futures-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Pick</th>
+                    <th>Point Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Futures categories dynamically populated -->
+            </tbody>
+        </table>
+        <button id="save-button">Save Picks</button>
+    </div>
+</main>
+
+<script>
+    // User login simulation
+    const currentUser = "Griffin";
+
+    // Futures categories
+    const futures = [
+        { id: 1, category: "Heisman Winner" },
+        { id: 2, category: "ACC Champ" },
+        { id: 3, category: "B1G Champ" },
+        { id: 4, category: "Big 12 Champ" },
+        { id: 5, category: "SEC Champ" },
+        { id: 6, category: "MAC Champ" },
+        { id: 7, category: "Natty Matchup (1)" },
+        { id: 8, category: "Natty Matchup (2)" },
+        { id: 9, category: "National Champ" }
+    ];
+
+    const futuresTable = document.querySelector("#futures-table tbody");
+
+    // Populate table with futures categories
+    futures.forEach((future) => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td><strong>${future.category}</strong></td>
+            <td>
+                <input type="text" name="future-${future.id}" placeholder="Your pick..." required>
+            </td>
+            <td>15</td>
+        `;
+
+        futuresTable.appendChild(row);
+    });
+
+    // Save picks to localStorage
+    document.getElementById("save-button").addEventListener("click", () => {
+        const picks = {};
+
+        futures.forEach((future) => {
+            const input = document.querySelector(`input[name="future-${future.id}"]`);
+            picks[future.id] = input.value;
+        });
+
+        const allPicks = JSON.parse(localStorage.getItem("futuresPicks")) || {};
+        allPicks[currentUser] = picks;
+        localStorage.setItem("futuresPicks", JSON.stringify(allPicks));
+
+        alert("Your picks have been saved!");
+    });
+
+    // Load existing picks
+    window.onload = () => {
+        const allPicks = JSON.parse(localStorage.getItem("futuresPicks")) || {};
+        const userPicks = allPicks[currentUser] || {};
+
+        futures.forEach((future) => {
+            const input = document.querySelector(`input[name="future-${future.id}"]`);
+            if (input && userPicks[future.id]) {
+                input.value = userPicks[future.id];
+            }
+        });
+    };
+</script>
+</body>
+</html>

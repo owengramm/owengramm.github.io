@@ -57,16 +57,17 @@
     const pageTitle = document.getElementById("page-title");
     const picksTable = document.querySelector("#picks-table tbody");
 
-    // Load matchups from the JSON file for the selected week
+    // Function to load matchups from the JSON file for the selected week
     function loadMatchups(week) {
-        fetch("./data/big-twelve-2024.json") // Replace with your actual file path
+        fetch("./data/big-twelve-2024.json") // Replace with your actual JSON file path
             .then(response => response.json())
             .then(data => {
                 picksTable.innerHTML = ""; // Clear the table
-                const matchups = data.filter(matchup => matchup.Week === parseInt(week)); // Filter matchups for the selected week
-                
-                if (matchups.length > 0) {
-                    matchups.forEach(matchup => {
+
+                const filteredMatchups = data.filter(matchup => matchup.Week === parseInt(week)); // Get matchups for the selected week
+
+                if (filteredMatchups.length > 0) {
+                    filteredMatchups.forEach(matchup => {
                         const row = document.createElement("tr");
                         row.innerHTML = `
                             <td><strong>${matchup.Matchup}</strong></td>

@@ -152,23 +152,3 @@ td:first-child {
     background-color: #371054; /* Darker TCU Purple on hover */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 
-#export-button {
-    background-color: #4D1979;
-    color: white;
-    border: 2px solid white;
-    padding: 15px 40px; /* Increased padding for a wider button */
-    font-size: 1.2em; /* Larger font size */
-    font-weight: bold; /* Bold font */
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 20px 10%; /* Match the table's side margins */
-    display: block; /* Ensure it's not inline */
-    text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#export-button:hover {
-    background-color: #371054;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-

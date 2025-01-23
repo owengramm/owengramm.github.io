@@ -27,7 +27,6 @@
 
 <main>
     <h1>Big 12 Picks</h1>
-    </div>
     <div class="matchups-container">
         <table id="picks-table">
             <thead>
@@ -44,7 +43,6 @@
         <button id="save-button">Save Picks</button>
     </div>
 </main>
-
 
 <script>
     // Matchups data
@@ -81,21 +79,21 @@
         picksTable.appendChild(row);
     });
 
-document.getElementById("save-button").addEventListener("click", () => {
-    const formData = new FormData(document.querySelector("#picks-table"));
-    const picks = {};
+    document.getElementById("save-button").addEventListener("click", () => {
+        const formData = new FormData(document.querySelector("#picks-table"));
+        const picks = {};
 
-    matchups.forEach((matchup) => {
-        picks[matchup.id] = formData.get(`matchup-${matchup.id}`);
+        matchups.forEach((matchup) => {
+            picks[matchup.id] = formData.get(`matchup-${matchup.id}`);
+        });
+
+        // Save picks for the current user
+        const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
+        allPicks[currentUser] = picks; // Save under the current user's name
+        localStorage.setItem("big12Picks", JSON.stringify(allPicks));
+
+        alert("Your picks have been saved!");
     });
-
-    // Save picks for the current user
-    const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
-    allPicks[currentUser] = picks; // Save under the current user's name
-    localStorage.setItem("big12Picks", JSON.stringify(allPicks));
-
-    alert("Your picks have been saved!");
-});
 
     // Load existing picks
     window.onload = () => {
@@ -112,46 +110,6 @@ document.getElementById("save-button").addEventListener("click", () => {
             }
         });
     };
-
-// Check if the logged-in user is Owen
-if (currentUser === "Owen") {
-    const exportButtonContainer = document.getElementById("export-button-container");
-
-    // Create the Export Button
-    const exportButton = document.createElement("button");
-    exportButton.id = "export-button";
-    exportButton.textContent = "Export to Excel";
-
-    // Append the Export Button
-    exportButtonContainer.appendChild(exportButton);
-
-    // Add the Export Functionality
-    exportButton.addEventListener("click", () => {
-        const allPicks = JSON.parse(localStorage.getItem("big12Picks")) || {};
-
-        // Convert the saved picks to a format suitable for Excel
-        const data = [];
-        for (const [username, picks] of Object.entries(allPicks)) {
-            for (const [matchupId, selectedTeam] of Object.entries(picks)) {
-                const matchup = matchups.find((m) => m.id == matchupId);
-                if (matchup) {
-                    data.push({
-                        Username: username,
-                        Matchup: `${matchup.team1} vs ${matchup.team2}`,
-                        Pick: selectedTeam,
-                    });
-                }
-            }
-        }
-
-        // Create a worksheet and export to Excel
-        const worksheet = XLSX.utils.json_to_sheet(data);
-        const workbook = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(workbook, worksheet, "Big12 Picks");
-        XLSX.writeFile(workbook, "Big12_Picks.xlsx");
-    });
-}
-
 </script>
 </body>
 </html>

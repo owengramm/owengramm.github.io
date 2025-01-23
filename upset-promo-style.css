@@ -130,12 +130,12 @@ td:first-child {
 
 /* Upset Table Specific Styling */
 .upset-table thead {
-    background-color: #BA0C2F; /* Red Header */
+    background-color: #FFCC00; /* App State Header */
 }
 
 /* Promo Table Specific Styling */
 .promo-table thead {
-    background-color: #C28C19; /* Gold Header */
+    background-color: #D35C02; /* Lorax Header */
 }
 
 /* Input Field Styling */

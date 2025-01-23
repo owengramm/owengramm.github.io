@@ -130,6 +130,7 @@ td:first-child {
     font-weight: bold; /* Bold for the Matchup column */
 }
 
+/* Save Picks Button Styling */
 button {
     background-color: #4D1979;
     color: white;
@@ -139,10 +140,11 @@ button {
     font-weight: bold; /* Bold font */
     border-radius: 5px;
     cursor: pointer;
-    margin: 40px auto; /* Increased margin to push the button further down from the table */
-    display: block;
+    margin: 20px 0; /* Remove auto centering */
+    display: inline-block; /* Make the button inline */
     text-align: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    float: right; /* Align button to the right */
 }
 
 button:hover {

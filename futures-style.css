@@ -152,19 +152,21 @@ input[type="text"]:focus {
     box-shadow: 0 0 5px #4D1979;
 }
 
-/* Save Button Styling */
+/* Save Picks Button Styling */
 button {
     background-color: #4D1979;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
+    border: 2px solid white; /* Added white border */
+    padding: 15px 40px; /* Increased padding for a wider button */
+    font-size: 1.2em; /* Larger font size */
+    font-weight: bold; /* Bold font */
     border-radius: 5px;
     cursor: pointer;
-    margin: 20px auto;
-    display: block;
+    margin: 20px 0; /* Remove auto centering */
+    display: inline-block; /* Make the button inline */
     text-align: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    float: right; /* Align button to the right */
 }
 
 button:hover {

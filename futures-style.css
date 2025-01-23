@@ -152,7 +152,6 @@ input[type="text"]:focus {
     box-shadow: 0 0 5px #4D1979;
 }
 
-/* Save Picks Button Styling */
 button {
     background-color: #4D1979;
     color: white;
@@ -162,11 +161,10 @@ button {
     font-weight: bold; /* Bold font */
     border-radius: 5px;
     cursor: pointer;
-    margin: 20px 0; /* Remove auto centering */
-    display: inline-block; /* Make the button inline */
+    margin: 20px 10%; /* Match the table's side margins */
+    display: block; /* Ensure it's not inline */
     text-align: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    float: right; /* Align button to the right */
 }
 
 button:hover {

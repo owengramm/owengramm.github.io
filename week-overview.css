@@ -6,10 +6,10 @@ body {
 
 /* Header styling */
 header {
-    background-color: #4D1979; /* TCU Purple */
+    background-color: #4D1979;
     color: white;
     padding: 0;
-    height: 60px; /* Fixed height for uniformity */
+    height: 60px; /* Set exact height for uniformity */
 }
 
 .header-container {
@@ -17,7 +17,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    height: 100%; /* Vertically align content */
+    height: 100%; /* Ensure content is centered vertically */
 }
 
 /* Navigation menu styling */

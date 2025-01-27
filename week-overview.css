@@ -106,16 +106,16 @@ h2 {
     text-align: center;
 }
 
-/* Consistent box styling for different content */
-.box {
-    background-color: #f0f0f0;
-    color: black;
+p {
+    width: 80%;
+    height: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #d3d3d3; /* Light grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    padding: 20px; /* Uniform padding: 20px all around */
-    max-width: 70%; /* Matches the week box */
-    margin: 20px auto; /* Center align and set vertical margin */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left; /* Left align text content */
+    overflow: hidden;
+    text-align: left;
 }
 
 /* General button styling */

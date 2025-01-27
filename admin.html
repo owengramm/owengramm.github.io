@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Update Current Week</title>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+</head>
+<body>
+    <h1>Update Current Week</h1>
+    <form id="update-week-form">
+        <label for="week-number">Enter Week Number:</label>
+        <input type="number" id="week-number" min="1" max="14" required>
+        <button type="submit">Set Week</button>
+    </form>
+    <p id="status-message"></p>
+
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCwupMId5o8musYtaEdAEhnGKwvfEhkDKE", // Replace with your Firebase API key
+            authDomain: "cfb-pick-em-b75c4.firebaseapp.com", // Replace with your Auth Domain
+            databaseURL: "https://cfb-pick-em-b75c4-default-rtdb.firebaseio.com", // Your database URL
+            projectId: "cfb-pick-em-b75c4", // Replace with your Project ID
+            storageBucket: "cfb-pick-em-b75c4.firebasestorage.app", // Replace with your Storage Bucket
+            messagingSenderId: "722777277682", // Replace with your Messaging Sender ID
+            appId: "1:722777277682:web:073caaa949b17ece2bbc6b" // Replace with your App ID
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const database = firebase.database(app);
+
+        // Form submission event listener
+        document.getElementById("update-week-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const weekNumber = document.getElementById("week-number").value;
+            const statusMessage = document.getElementById("status-message");
+
+            try {
+                // Update the current week in Firebase
+                const weekRef = firebase.database().ref("currentWeek");
+                await firebase.database().set(weekRef, { week: parseInt(weekNumber) });
+
+                statusMessage.textContent = `Week updated successfully to Week ${weekNumber}!`;
+                statusMessage.style.color = "green";
+            } catch (error) {
+                console.error("Error updating week:", error);
+                statusMessage.textContent = "Failed to update the week. Please try again.";
+                statusMessage.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

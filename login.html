@@ -4,47 +4,34 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content=
-        "width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CFB-Pick-Em</title>
     <link rel="stylesheet" href="login-style.css">
-    <script src=
-"https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js">
-    </script>
-
-    <script src=
-"https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js">
-    </script>
-    
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
     <script src="form.js"></script>
 </head>
 
 <body>
     <div class="formContainer">
 
-<!-- Headers and Image -->
+        <!-- Headers and Image -->
         <h1>CFB Pick 'Em</h1>
         <h2><em>2025 - 2026 Season</em></h2>
         <img src="UNTLorax.jpg" alt="ALL HAIL THE LORAX LAY">
 
-<!-- Login Function -->
-        <input type="email" 
-            placeholder="email" id="email" />
-        <br />
-        <input type="password" 
-            placeholder="password" id="password" />
-        <br />
-        <button onclick="signUp()" id="signUp">
-            SignUp
-        </button>
-        <button onclick="signIn()" id="signIn">
-            SignIn
-        </button>
-        <button onclick="signOut()" id="signOut">
-            SignOut
-        </button>
+        <!-- Login Function -->
+        <div class="login-container">
+            <input type="email" placeholder="email" id="email" />
+            <br />
+            <input type="password" placeholder="password" id="password" />
+            <br />
+            <button class="login-button" onclick="logIn()" id="logIn">
+                Log In
+            </button>
+        </div>
+        
     </div>
 </body>
 
 </html>
-

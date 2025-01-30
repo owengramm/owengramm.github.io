@@ -35,7 +35,6 @@ img {
     object-fit: cover;
 }
 
-
 .login-container {
     background-color: #f0f0f0;
     padding: 15px;
@@ -58,7 +57,7 @@ img {
     box-sizing: border-box;
 }
 
-.login-container button {
+.login-button {
     width: 100%;
     padding: 15px;
     background-color: #4D1979;
@@ -70,6 +69,6 @@ img {
     box-sizing: border-box;
 }
 
-.login-container button:hover {
+.login-button:hover {
     background-color: #6A1B9A;
 }

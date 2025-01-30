@@ -1,6 +1,3 @@
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later,
-// measurementId is optional
 var firebaseConfig = {
   apiKey: "AIzaSyCwupMId5o8musYtaEdAEhnGKwvfEhkDKE",
   authDomain: "cfb-pick-em-b75c4.firebaseapp.com",
@@ -13,25 +10,25 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-// Log In function
 function logIn() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    // Firebase authentication
+    console.log("Logging in with email:", email); // Debugging log
+
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            // Successful login
             var user = userCredential.user;
 
-            // Redirect to home.html upon successful login
+            console.log("Login successful for user:", user.email); // Debugging log
+
             window.location.href = "home.html";
         })
         .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
 
-            // Handle errors (for example, show an alert)
+            console.log("Error:", errorMessage); // Debugging log
             alert("Error: " + errorMessage);
         });
 }
